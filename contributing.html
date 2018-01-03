@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">mavtables
-   &#160;<span id="projectnumber">0.0.1</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
    <div id="projectbrief">MAVLink router and firewall.</div>
   </td>
@@ -100,7 +100,8 @@ $(function() {
 <li>Functions, variables, and namespaces should be <code>snake_case</code>.</li>
 <li>No name may begin with a single <code>_</code> (underscore) or contain <code>__</code> (double underscore).</li>
 <li>Private data members and functions should end in an underscore. have an <code>autodoc</code> entry in the Sphinx documentation.</li>
-<li>File name must be lower case and should only include letters, numbers, and underscores.</li>
+<li>Each class should have it's own source and header file.</li>
+<li>When a file contains a class the file should be named for the class. All other file names should be lower case and should only include letters, numbers, and underscores.</li>
 <li>C++ source code files should use the <code>.cpp</code> extension and <code>.hpp</code> for header files. <code>.c</code> and <code>.h</code> should only be used for C files.</li>
 <li>All header files must have include guards and the name should be the file name (all uppercase) with <code>_HPP_</code> appended.</li>
 <li><p class="startli">All public functions and classes should contain <a href="https://www.stack.nl/~dimitri/doxygen/manual/docblocks.html">Doxygen style comments</a> and the recommended block format is </p><pre class="fragment">\**

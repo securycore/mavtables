@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">mavtables
-   &#160;<span id="projectnumber">0.0.1</span>
+   &#160;<span id="projectnumber">0.0.4</span>
    </div>
    <div id="projectbrief">MAVLink router and firewall.</div>
   </td>
@@ -69,9 +69,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga3fcd0f5699040199913c491adbc7302d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__utility.html#ga3fcd0f5699040199913c491adbc7302d">capital_case</a> (std::string str)</td></tr>
+<tr class="memitem:ga3fcd0f5699040199913c491adbc7302d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__utility.html#ga3fcd0f5699040199913c491adbc7302d">capital_case</a> (std::string <a class="el" href="group__utility.html#ga62d901562ed7a88fb9536040cbc6b2f7">str</a>)</td></tr>
 <tr class="memdesc:ga3fcd0f5699040199913c491adbc7302d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Capitalize first letter of a string.  <a href="#ga3fcd0f5699040199913c491adbc7302d">More...</a><br /></td></tr>
 <tr class="separator:ga3fcd0f5699040199913c491adbc7302d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabef40db5dbeceacff24a59526a2afd39"><td class="memTemplParams" colspan="2">template&lt;class ByteType  = unsigned char, class T &gt; </td></tr>
+<tr class="memitem:gabef40db5dbeceacff24a59526a2afd39"><td class="memTemplItemLeft" align="right" valign="top">std::array&lt; ByteType, sizeof(T)&gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__utility.html#gabef40db5dbeceacff24a59526a2afd39">to_bytes</a> (T number)</td></tr>
+<tr class="separator:gabef40db5dbeceacff24a59526a2afd39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga62d901562ed7a88fb9536040cbc6b2f7"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:ga62d901562ed7a88fb9536040cbc6b2f7"><td class="memTemplItemLeft" align="right" valign="top">std::string&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="group__utility.html#ga62d901562ed7a88fb9536040cbc6b2f7">str</a> (const T &amp;object)</td></tr>
+<tr class="separator:ga62d901562ed7a88fb9536040cbc6b2f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Utility functions that don't warrant their own file. </p>
@@ -95,8 +101,84 @@ Functions</h2></td></tr>
 <p>Capitalize first letter of a string. </p>
 <dl class="bug"><dt><b><a class="el" href="bug.html#_bug000001">Bug:</a></b></dt><dd>Index error if given an empty string. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="util_8cpp_source.html#l00023">23</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
-<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    str[0] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(toupper(str[0]));</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> str;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div></div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="util_8cpp_source.html#l00033">33</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="util_8hpp_source.html#l00061">str()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;{</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="group__utility.html#ga62d901562ed7a88fb9536040cbc6b2f7">str</a>[0] = <span class="keyword">static_cast&lt;</span><span class="keywordtype">char</span><span class="keyword">&gt;</span>(toupper(<a class="code" href="group__utility.html#ga62d901562ed7a88fb9536040cbc6b2f7">str</a>[0]));</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="group__utility.html#ga62d901562ed7a88fb9536040cbc6b2f7">str</a>;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div><div class="ttc" id="group__utility_html_ga62d901562ed7a88fb9536040cbc6b2f7"><div class="ttname"><a href="group__utility.html#ga62d901562ed7a88fb9536040cbc6b2f7">str</a></div><div class="ttdeci">std::string str(const T &amp;object)</div><div class="ttdef"><b>Definition:</b> <a href="util_8hpp_source.html#l00061">util.hpp:61</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga62d901562ed7a88fb9536040cbc6b2f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga62d901562ed7a88fb9536040cbc6b2f7">&#9670;&nbsp;</a></span>str()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string str </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>object</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Convert any object supporting the output stream operator (&lt;&lt;) to a string.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>Type of the object to convert to a string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">object</td><td>The object to convert to a string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The string representing the object. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="util_8hpp_source.html#l00061">61</a> of file <a class="el" href="util_8hpp_source.html">util.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    std::ostringstream oss;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    oss &lt;&lt; object;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> oss.str();</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="gabef40db5dbeceacff24a59526a2afd39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabef40db5dbeceacff24a59526a2afd39">&#9670;&nbsp;</a></span>to_bytes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ByteType  = unsigned char, class T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;ByteType, sizeof(T)&gt; to_bytes </td>
+          <td>(</td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>number</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Convert numeric types to bytes.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ByteType</td><td>Numeric type to return in the array of bytes. </td></tr>
+    <tr><td class="paramname">T</td><td>Type of the number being converted to bytes. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">number</td><td>Number to convert to bytes </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The array of bytes from the given number, in LSB order. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="util_8hpp_source.html#l00039">39</a> of file <a class="el" href="util_8hpp_source.html">util.hpp</a>.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::array&lt;ByteType, sizeof(T)&gt; n;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    n.fill(10);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">for</span> (<span class="keyword">auto</span> i : boost::irange(static_cast&lt;size_t&gt;(0), <span class="keyword">sizeof</span>(T)))</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        n[i] = (number &gt;&gt; i * 8) &amp; 0xFF;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">return</span> n;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div></div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
